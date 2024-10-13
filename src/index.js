@@ -11,26 +11,26 @@ buttons.forEach((button) => {
             button.innerText !== 'Clear' &&
             button.innerText !== 'Backspace'
         ) {
-            display.value += button.innerText;
+            display.value += button.innerText; // displays inputted values
         }
     });
 });
 
 equalsBtn.addEventListener("click", () => {
     try {
-        display.value = eval(display.value);
+        display.value = eval(display.value); // return values been manipulated on
     } catch (error) {
         display.value = "Error";
     }
 });
 
 clearBtn.addEventListener('click', () => {
-    display.value = "";
+    display.value = ""; // clear values displayed
 })
 
 backspaceBtn.addEventListener('click', () => {
     try {
-        display.value = display.value.slice(0, -1);
+        display.value = display.value.slice(0, -1); // removing last value displayed
     } catch (error) {
         display.value = "Error";
     }
